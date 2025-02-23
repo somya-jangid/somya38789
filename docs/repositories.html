@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">GitBranch</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search or jump to...">
+        </div>
+        <nav>
+            <a href="repositories.html">Repositories</a>
+            <a href="developers.html">Developers</a>
+            <a href="explore.html">Explore</a>
+            <div class="profile-dropdown">
+                <a href="#">Profile</a>
+                <div class="dropdown-content">
+                    <a href="#">Your Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Sign Out</a>
+                </div>
+            </div>
+            <button class="plus-button">+</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="repositories-page">
+            <div class="top-bar">
+                <h2>Repositories</h2>
+                <div class="filters">
+                    <select>
+                        <option>Sort by: Last Updated</option>
+                        <option>Sort by: Name</option>
+                        <option>Sort by: Stars</option>
+                    </select>
+                    <select>
+                        <option>Type: All</option>
+                        <option>Type: Public</option>
+                        <option>Type: Private</option>
+                    </select>
+                    <select>
+                        <option>Language: All</option>
+                        <option>Language: JavaScript</option>
+                        <option>Language: Python</option>
+                    </select>
+                </div>
+                <button class="btn-new-repo">New Repository</button>
+            </div>
+
+            <div class="repository-list">
+                <div class="repo-card">
+                    <a href="#" class="repo-name">Project-1</a>
+                    <p class="repo-description">A brief description of the project.</p>
+                    <span class="repo-language">JavaScript</span>
+                    <div class="repo-stats">
+                        <span><i class="star-icon"></i> 12</span>
+                        <span><i class="fork-icon"></i> 5</span>
+                        <span><i class="watch-icon"></i> 2</span>
+                    </div>
+                    <span class="repo-updated">Updated 2 hours ago</span>
+                </div>
+                <div class="repo-card">
+                    <a href="#" class="repo-name">My-Python-App</a>
+                    <p class="repo-description">Another project description here.</p>
+                    <span class="repo-language">Python</span>
+                    <div class="repo-stats">
+                        <span><i class="star-icon"></i> 45</span>
+                        <span><i class="fork-icon"></i> 18</span>
+                        <span><i class="watch-icon"></i> 7</span>
+                    </div>
+                    <span class="repo-updated">Updated 1 day ago</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Contact</a>
+            <a href="#">Status</a>
+        </nav>
+        <p>&copy; 2023 GitBranch. All rights reserved.</p>
+        <div class="social-icons">
+           </div>
+    </footer>
+<script  src="script.js"></script>
+</body>
+</html>
