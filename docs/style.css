@@ -1,0 +1,448 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #161b22;
+    color: #f0f6fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #2f81f7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header,
+footer {
+    background-color: #161b22;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.search-bar input {
+    background-color: rgba(30, 35, 45, 0.6);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: #f0f6fc;
+    backdrop-filter: blur(10px);
+    width: 250px;
+}
+
+nav a {
+    color: #f0f6fc;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(30, 35, 45, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    right: 0;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #f0f6fc;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.plus-button {
+    background-color: #2f81f7;
+    color: #f0f6fc;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1684493786877-744385d18590'); /* Blurry background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    position: relative;
+    min-height: 400px;
+}
+
+.hero::before{
+ content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.hero-panel {
+    background-color: rgba(30, 35, 45, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index:1;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #8b949e;
+}
+
+.hero-buttons button {
+    margin: 0 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-signup {
+    background-color: #2f81f7;
+    color: #f0f6fc;
+    border: none;
+}
+
+.btn-explore {
+    background-color: rgba(30, 35, 45, 0.6);
+    color: #f0f6fc;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.feature-card {
+    background-color: rgba(30, 35, 45, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card img {
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Call to Action */
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.cta-panel {
+    background-color: rgba(30, 35, 45, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-get-started {
+    background-color: #2f81f7;
+    color: #f0f6fc;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Repositories Page */
+.repositories-page .top-bar,
+.developers-page .top-bar,
+.explore-page .top-bar
+ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.repositories-page .filters select,
+.developers-page .filters select,
+.explore-page .filters select
+{
+    background-color: rgba(30, 35, 45, 0.6);
+    color: #f0f6fc;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.btn-new-repo {
+    background-color: #2f81f7;
+    color: #f0f6fc;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.repository-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.repo-card {
+    background-color: rgba(30, 35, 45, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.repo-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(40, 45, 55, 0.7);
+}
+
+.repo-name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.repo-description {
+    color: #8b949e;
+    margin-bottom: 0.5rem;
+}
+
+.repo-language {
+    color: #2f81f7;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.repo-stats {
+    display: flex;
+    gap: 1rem;
+    color: #8b949e;
+    margin-bottom: 0.5rem;
+}
+
+.repo-updated {
+    color: #8b949e;
+    font-size: 0.8rem;
+}
+
+/* Developers Page */
+.developer-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.developer-card {
+    background-color: rgba(30, 35, 45, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.developer-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(40, 45, 55, 0.7);
+}
+
+.avatar {
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.username {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.name {
+    color: #8b949e;
+    margin-bottom: 0.5rem;
+}
+
+.bio {
+    color: #8b949e;
+    margin-bottom: 0.5rem;
+}
+
+.followers {
+    color: #2f81f7;
+    margin-bottom: 0.5rem;
+}
+
+/* Explore Page */
+.explore-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.explore-item {
+    background-color: rgba(30, 35, 45, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.explore-item-name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer nav {
+    display: flex;
+    gap: 1rem;
+}
+
+footer p {
+    color: #8b949e;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        margin: 1rem 0;
+    }
+    .search-bar input{
+        width: 200px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; /* Keep items to the left */
+        margin-top: 0.5rem; /* Add some space above the nav items */
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 1rem; /* Use margin-right for spacing */
+        margin-bottom: 0.5rem; /* Add some space below each item */
+    }
+    .hero-panel{
+        width: 90%;
+    }
+
+    .plus-button {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .profile-dropdown {
+        margin-top: 0.5rem;
+    }
+
+    .repositories-page .top-bar,
+    .developers-page .top-bar,
+    .explore-page .top-bar
+     {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters {
+        margin-bottom: 1rem;
+    }
+    .filters select{
+        margin-bottom: 0.5rem;
+    }
+
+}
